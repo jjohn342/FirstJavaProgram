@@ -1,18 +1,10 @@
 import java.util.*;
 
-public class TestIterator {
-  public static void main(String[] args) {
-    LinkedList<String> collection = new LinkedList<>();
-    collection.add("Sushi"); 
-    collection.add("Soup"); 
-    collection.add("Fried Rice"); 
-    collection.add("Chicken Noodes"); 
 
-    Iterator<String> iterator = collection.iterator();
-    while (iterator.hasNext()) {
-      System.out.println(iterator.next().toUpperCase() + " ");
-      collection.forEach(e -> System.out.println(e.toLowerCase() + ((LinkedList) collection)));
-    }
-    System.out.println();
+public class Program1 {
+  public static void main(String[] args) {
+    System.out.println("Sushi");
+    System.out.println("Soup");
+    System.out.prinltn("Noodles");
   }
 }
