@@ -1,0 +1,60 @@
+import java.util.Scanner; 
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+public class SecondJavaProgram2 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
+		int[]firstlist = new int[4];
+		int[]secondlist = new int[4];
+		int[]thirdlist = new int[4];
+		
+		System.out.printf("List 1, Enter four numbers: ");
+		for (int i = 0; i < firstlist.length; i++) {
+			firstlist[i] = input.nextInt();
+		}
+		
+		System.out.printf("List 2, Enter four numbers: ");
+		for (int i = 0; i < secondlist.length; i++) {
+			secondlist[i] = input.nextInt();
+		}
+		
+		System.out.printf("List 3, Enter four numbers: ");
+		for (int i = 0; i < thirdlist.length; i++) {
+			thirdlist[i] = input.nextInt();
+		}
+		
+		
+		System.out.printf("Your original List1: ");
+		printArray(firstlist);
+		System.out.printf("Your original List2: ");
+		printArray(secondlist);
+		System.out.printf("Your original List3: ");
+		printArray(thirdlist);
+
+
+		System.out.printf("Sorted List1 is: ");
+		Arrays.sort(firstlist);
+		printArray(thirdlist);
+		
+		System.out.printf("Enter a number from the sorted List1 to search for: ");
+		Scanner newstart = null;
+		
+		int value = newstart.nextInt();
+		int newval = Arrays.binarySearch(firstlist, value);
+		System.out.println("Value " + value + " is in index " + newval);
+		Arrays.sort(firstlist);
+		Arrays.sort(secondlist);
+		Arrays.sort(thirdlist);
+		System.out.println("List that are same when sorted: ");
+	}
+
+	private static void printArray(int[] thirdlist) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
