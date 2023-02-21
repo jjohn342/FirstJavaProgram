@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.util.ArrayList; 
+public class SecondJavaProgram {
+
+	public static void main(String[] args) {
+
+		int i, num, amount = 0;
+
+		int overall = 0, value;
+
+		Scanner input = new Scanner(System.in); 
+
+		System.out.println("Enter the number of items: "); 
+
+		num = input.nextInt(); 
+
+		int valList[] = new int[num]; 
+
+		System.out.println("Enter the numbers: ");   
+		
+		for(i = 0; i < num; i++) {
+			valList[i] = new Scanner(System.in).nextInt();
+		}
+		int copy[] = new int[num];
+		int newarray[] = new int[num];
+		
+		System.arraycopy(valList, 0, copy, 0, num);
+		System.out.println("Your printed arrays: "); 
+
+				
+		for(i = 0 ; i < num; i++) {
+			System.out.println(copy[i] + " "); 
+		}
+		
+		for(i = 0 ; i < num; i++) {
+			newarray[i] = valList[i] * 2;
+		}
+
+		System.out.println("Your copied arrays: "); 
+		for(i = 0 ; i < num; i++) {
+			System.out.println(newarray[i] + " ");
+		}
+        
+
+	}
+
+}
